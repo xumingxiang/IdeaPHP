@@ -1,0 +1,19 @@
+@{
+	$list  =$viewData['pers'];
+}
+<html>
+<head>
+<title>标题</title>
+</head>
+<body>
+爱爱爱
+<div>
+@foreach($list as $item){
+
+<span>姓名：</span>	@$item->name 2311<br/>
+
+}
+
+</div>   
+</body>
+<html>
