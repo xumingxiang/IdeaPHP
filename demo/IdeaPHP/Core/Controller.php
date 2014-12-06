@@ -18,15 +18,14 @@ abstract class Controller{
 			 $viewName= $args[0];
 			 $this-> viewOverload($viewName,$controllerName);
 		    }else{
-			$viewName= $this->routeData['action'];
-			$viewData= $this->viewData;
-			
-			$renderAction=&HtmlHelper::renderAction;
-			$view= new View();		
-			$viewSourceFile=$view->findView($this->controllerContext,$viewName);
-			require($viewSourceFile);
+				$viewName= $this->routeData['action'];
+				$viewData= $this->viewData;
+				//$renderAction =& HtmlHelper::renderAction;
+				$view= new View();		
+				$viewSourceFile=$view->findView($this->controllerContext,$viewName);
+				require($viewSourceFile);
+			}
 	}
- }
  
 	private function viewOverload($viewName,$controllerName) {
 		$viewData= $this->viewData;
